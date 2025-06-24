@@ -1,0 +1,197 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(159, 61%, 41%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(262, 83%, 58%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  --sidebar-background: hsl(0, 0%, 98%);
+  --sidebar-foreground: hsl(240, 5.3%, 26.1%);
+  --sidebar-primary: hsl(240, 5.9%, 10%);
+  --sidebar-primary-foreground: hsl(0, 0%, 98%);
+  --sidebar-accent: hsl(240, 4.8%, 95.9%);
+  --sidebar-accent-foreground: hsl(240, 5.9%, 10%);
+  --sidebar-border: hsl(220, 13%, 91%);
+  --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(159, 61%, 41%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(262, 83%, 58%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  --sidebar-background: hsl(240, 5.9%, 10%);
+  --sidebar-foreground: hsl(240, 4.8%, 95.9%);
+  --sidebar-primary: hsl(224.3, 76.3%, 94.1%);
+  --sidebar-primary-foreground: hsl(240, 5.9%, 10%);
+  --sidebar-accent: hsl(240, 3.7%, 15.9%);
+  --sidebar-accent-foreground: hsl(240, 4.8%, 95.9%);
+  --sidebar-border: hsl(240, 3.7%, 15.9%);
+  --sidebar-ring: hsl(217.2, 91.2%, 59.8%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Email Content Styles */
+.email-content {
+  /* Ensure proper email rendering */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.email-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.email-content table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.email-content td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.email-content a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.email-content a:hover {
+  color: #0056b3;
+}
+
+.email-content p {
+  margin: 0 0 1em 0;
+}
+
+.email-content h1, .email-content h2, .email-content h3, 
+.email-content h4, .email-content h5, .email-content h6 {
+  margin: 1em 0 0.5em 0;
+  font-weight: 600;
+}
+
+.email-content ul, .email-content ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+.email-content blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 4px solid #ddd;
+  color: #666;
+}
+
+/* Ensure email content doesn't overflow */
+.email-content * {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Email Modal Specific Styles */
+.email-modal-content {
+  /* Ensure proper email rendering in modal */
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.email-modal-content .email-content {
+  /* Additional styles for modal email content */
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.email-modal-content .email-content table {
+  /* Ensure tables render properly */
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.email-modal-content .email-content td,
+.email-modal-content .email-content th {
+  padding: 8px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.email-modal-content .email-content img {
+  /* Ensure images are responsive */
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1em auto;
+}
+
+.email-modal-content .email-content a {
+  /* Style links properly */
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.email-modal-content .email-content a:hover {
+  color: #0056b3;
+}
+
+/* Ensure email content doesn't interfere with modal */
+.email-modal-content .email-content {
+  /* Reset any conflicting styles */
+  font-family: inherit;
+  color: inherit;
+}
+
+.email-modal-content .email-content * {
+  /* Ensure all elements inherit properly */
+  font-family: inherit;
+}
