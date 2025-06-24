@@ -1,0 +1,540 @@
+{% extends "base.html" %}
+
+{% block title %}API Documentation - Email Automation System{% endblock %}
+
+{% block content %}
+<div class="container my-4">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2>
+                <i class="bi bi-file-text me-2"></i>API Documentation
+            </h2>
+            <p class="text-muted">Complete REST API documentation for the Email Automation System</p>
+        </div>
+    </div>
+
+    <!-- API Overview -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-info-circle me-2"></i>API Overview
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Base URL</h6>
+                            <code id="base-url">https://your-domain.com/api</code>
+                            
+                            <h6 class="mt-3">Authentication</h6>
+                            <p>All protected endpoints require JWT authentication via Bearer token in the Authorization header.</p>
+                            <code>Authorization: Bearer &lt;access_token&gt;</code>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Response Format</h6>
+                            <p>All responses are in JSON format with appropriate HTTP status codes.</p>
+                            
+                            <h6>Rate Limiting</h6>
+                            <p>API requests are not currently rate limited but may be in future versions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Testing Tool -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-play-circle me-2"></i>API Testing Tool
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="test-endpoint" class="form-label">Endpoint</label>
+                                <select class="form-select" id="test-endpoint">
+                                    <option value="GET /api/auth/profile">GET /api/auth/profile</option>
+                                    <option value="GET /api/emails/stats">GET /api/emails/stats</option>
+                                    <option value="GET /api/emails/">GET /api/emails/</option>
+                                    <option value="POST /api/emails/fetch">POST /api/emails/fetch</option>
+                                    <option value="GET /api/emails/accounts">GET /api/emails/accounts</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="test-token" class="form-label">Access Token (optional)</label>
+                                <input type="text" class="form-control" id="test-token" 
+                                       placeholder="Will use stored token if empty">
+                            </div>
+                            <button class="btn btn-primary" id="test-api-btn">
+                                <i class="bi bi-play me-2"></i>Test API
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Response</label>
+                            <pre id="api-response" class="bg-body-secondary p-3 rounded" style="height: 200px; overflow-y: auto;">
+Click "Test API" to see response
+                            </pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API Endpoints -->
+    <div class="row">
+        <div class="col-12">
+            <!-- Authentication Endpoints -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-shield-lock me-2"></i>Authentication Endpoints
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="authAccordion">
+                        <!-- Login -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#auth-login">
+                                    <span class="badge bg-success me-2">POST</span>
+                                    /api/auth/login
+                                </button>
+                            </h2>
+                            <div id="auth-login" class="accordion-collapse collapse" data-bs-parent="#authAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Authenticate user and receive access tokens</p>
+                                    <h6>Request Body:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "email": "admin@emailautomation.com",
+  "password": "admin123"
+}</code></pre>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "message": "Login successful",
+  "user": {
+    "id": "admin_user_001",
+    "username": "admin",
+    "email": "admin@emailautomation.com",
+    "role": "admin"
+  },
+  "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOi...",
+  "refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOi..."
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Register -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#auth-register">
+                                    <span class="badge bg-success me-2">POST</span>
+                                    /api/auth/register
+                                </button>
+                            </h2>
+                            <div id="auth-register" class="accordion-collapse collapse" data-bs-parent="#authAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Register a new user account</p>
+                                    <h6>Request Body:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "username": "newuser",
+  "email": "user@example.com",
+  "password": "password123"
+}</code></pre>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "message": "User registered successfully",
+  "user": {
+    "id": "user_123",
+    "username": "newuser",
+    "email": "user@example.com",
+    "role": "user"
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Profile -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#auth-profile">
+                                    <span class="badge bg-primary me-2">GET</span>
+                                    /api/auth/profile
+                                    <span class="badge bg-warning ms-2">Protected</span>
+                                </button>
+                            </h2>
+                            <div id="auth-profile" class="accordion-collapse collapse" data-bs-parent="#authAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Get current user profile information</p>
+                                    <p><strong>Authentication:</strong> Required</p>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "user": {
+    "id": "admin_user_001",
+    "username": "admin",
+    "email": "admin@emailautomation.com",
+    "role": "admin",
+    "is_active": true,
+    "created_at": "2024-01-01T00:00:00",
+    "last_login": "2024-01-01T12:00:00"
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Email Endpoints -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-envelope me-2"></i>Email Management Endpoints
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="emailAccordion">
+                        <!-- Fetch Emails -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#email-fetch">
+                                    <span class="badge bg-success me-2">POST</span>
+                                    /api/emails/fetch
+                                    <span class="badge bg-warning ms-2">Protected</span>
+                                </button>
+                            </h2>
+                            <div id="email-fetch" class="accordion-collapse collapse" data-bs-parent="#emailAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Manually trigger email fetching from all configured accounts</p>
+                                    <p><strong>Authentication:</strong> Required</p>
+                                    <h6>Request Body (optional):</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "limit": 50
+}</code></pre>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "message": "Email fetch completed",
+  "results": {
+    "total_accounts": 3,
+    "successful_accounts": 2,
+    "failed_accounts": 1,
+    "total_emails_fetched": 45,
+    "errors": ["Connection failed for account: user@example.com"]
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- List Emails -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#email-list">
+                                    <span class="badge bg-primary me-2">GET</span>
+                                    /api/emails/
+                                    <span class="badge bg-warning ms-2">Protected</span>
+                                </button>
+                            </h2>
+                            <div id="email-list" class="accordion-collapse collapse" data-bs-parent="#emailAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> List emails with filtering and pagination</p>
+                                    <p><strong>Authentication:</strong> Required</p>
+                                    <h6>Query Parameters:</h6>
+                                    <ul>
+                                        <li><code>page</code> - Page number (default: 1)</li>
+                                        <li><code>per_page</code> - Items per page (default: 20, max: 100)</li>
+                                        <li><code>category</code> - Filter by category</li>
+                                        <li><code>account</code> - Filter by account email</li>
+                                        <li><code>search</code> - Search in subject, sender, and body</li>
+                                    </ul>
+                                    <h6>Example Request:</h6>
+                                    <code>GET /api/emails/?page=1&per_page=10&category=billing</code>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "emails": [
+    {
+      "id": "email_123",
+      "account_email": "user@example.com",
+      "subject": "Invoice #123",
+      "sender": "billing@company.com",
+      "date": "2024-01-01T12:00:00",
+      "body": "Your invoice for...",
+      "category": "billing",
+      "is_read": false,
+      "tags": ["important"],
+      "created_at": "2024-01-01T12:00:00"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "per_page": 10,
+    "total": 45,
+    "pages": 5
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Get Email Stats -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#email-stats">
+                                    <span class="badge bg-primary me-2">GET</span>
+                                    /api/emails/stats
+                                    <span class="badge bg-warning ms-2">Protected</span>
+                                </button>
+                            </h2>
+                            <div id="email-stats" class="accordion-collapse collapse" data-bs-parent="#emailAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Get email statistics and counts</p>
+                                    <p><strong>Authentication:</strong> Required</p>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "stats": {
+    "total_emails": 150,
+    "total_accounts": 3,
+    "emails_by_category": {
+      "billing": 25,
+      "support": 40,
+      "marketing": 60,
+      "general": 25
+    },
+    "emails_by_account": {
+      "user1@example.com": 50,
+      "user2@example.com": 75,
+      "user3@example.com": 25
+    },
+    "last_fetch_time": "2024-01-01T12:00:00",
+    "fetch_errors": 2,
+    "read_emails": 80,
+    "unread_emails": 70
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Get Accounts -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#email-accounts">
+                                    <span class="badge bg-primary me-2">GET</span>
+                                    /api/emails/accounts
+                                    <span class="badge bg-warning ms-2">Protected</span>
+                                </button>
+                            </h2>
+                            <div id="email-accounts" class="accordion-collapse collapse" data-bs-parent="#emailAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Get configured email accounts (without passwords)</p>
+                                    <p><strong>Authentication:</strong> Required</p>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "accounts": [
+    {
+      "email": "user@example.com",
+      "imap_server": "mail.hostinger.com",
+      "imap_port": 993,
+      "account_type": "hostinger",
+      "is_active": true
+    }
+  ],
+  "total_accounts": 1
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Endpoints -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-shield me-2"></i>Admin Endpoints
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="accordion" id="adminAccordion">
+                        <!-- System Status -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#admin-status">
+                                    <span class="badge bg-primary me-2">GET</span>
+                                    /api/admin/system/status
+                                    <span class="badge bg-danger ms-2">Admin Only</span>
+                                </button>
+                            </h2>
+                            <div id="admin-status" class="accordion-collapse collapse" data-bs-parent="#adminAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Get system status and health information</p>
+                                    <p><strong>Authentication:</strong> Admin role required</p>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "status": {
+    "system_health": "healthy",
+    "services": {
+      "google_sheets": "connected",
+      "email_storage": "active",
+      "categorization": "active"
+    },
+    "data_counts": {
+      "emails_in_storage": 150,
+      "total_users": 5,
+      "active_sessions": 3
+    }
+  }
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Test Accounts -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#admin-test">
+                                    <span class="badge bg-success me-2">POST</span>
+                                    /api/emails/accounts/test
+                                    <span class="badge bg-danger ms-2">Admin Only</span>
+                                </button>
+                            </h2>
+                            <div id="admin-test" class="accordion-collapse collapse" data-bs-parent="#adminAccordion">
+                                <div class="accordion-body">
+                                    <p><strong>Description:</strong> Test connectivity to all configured email accounts</p>
+                                    <p><strong>Authentication:</strong> Admin role required</p>
+                                    <h6>Response:</h6>
+                                    <pre class="bg-body-secondary p-2 rounded"><code>{
+  "test_results": [
+    {
+      "email": "user@example.com",
+      "status": "connected",
+      "imap_server": "mail.hostinger.com",
+      "imap_port": 993
+    }
+  ],
+  "total_tested": 3,
+  "successful": 2,
+  "failed": 1
+}</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Error Codes -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-exclamation-triangle me-2"></i>HTTP Status Codes
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Success Codes</h6>
+                            <ul class="list-unstyled">
+                                <li><span class="badge bg-success">200</span> OK - Request successful</li>
+                                <li><span class="badge bg-success">201</span> Created - Resource created</li>
+                            </ul>
+                            
+                            <h6>Client Error Codes</h6>
+                            <ul class="list-unstyled">
+                                <li><span class="badge bg-warning">400</span> Bad Request - Invalid request data</li>
+                                <li><span class="badge bg-warning">401</span> Unauthorized - Authentication required</li>
+                                <li><span class="badge bg-warning">403</span> Forbidden - Insufficient permissions</li>
+                                <li><span class="badge bg-warning">404</span> Not Found - Resource not found</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Server Error Codes</h6>
+                            <ul class="list-unstyled">
+                                <li><span class="badge bg-danger">500</span> Internal Server Error - Server error</li>
+                            </ul>
+                            
+                            <h6>Error Response Format</h6>
+                            <pre class="bg-body-secondary p-2 rounded"><code>{
+  "error": "Detailed error message"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Set base URL
+    document.getElementById('base-url').textContent = window.location.origin + '/api';
+    
+    // API testing functionality
+    document.getElementById('test-api-btn').addEventListener('click', testAPI);
+});
+
+async function testAPI() {
+    const endpoint = document.getElementById('test-endpoint').value;
+    const customToken = document.getElementById('test-token').value.trim();
+    const responseElement = document.getElementById('api-response');
+    
+    // Parse endpoint
+    const [method, path] = endpoint.split(' ');
+    const url = window.location.origin + path;
+    
+    // Get token
+    const token = customToken || localStorage.getItem('access_token');
+    
+    try {
+        responseElement.textContent = 'Making request...';
+        
+        const options = {
+            method: method
+        };
+        
+        // Add authorization header if token is available
+        if (token) {
+            options.headers = {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json'
+            };
+        }
+        
+        // Add body for POST requests
+        if (method === 'POST' && path.includes('/fetch')) {
+            options.body = JSON.stringify({ limit: 10 });
+        }
+        
+        const response = await fetch(url, options);
+        const data = await response.json();
+        
+        const result = {
+            status: response.status,
+            statusText: response.statusText,
+            headers: Object.fromEntries(response.headers.entries()),
+            data: data
+        };
+        
+        responseElement.textContent = JSON.stringify(result, null, 2);
+        
+    } catch (error) {
+        responseElement.textContent = `Error: ${error.message}`;
+    }
+}
+</script>
+{% endblock %}

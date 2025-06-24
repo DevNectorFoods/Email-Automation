@@ -1,0 +1,1038 @@
+{
+  "summary": {
+    "total_tests": 20,
+    "passed_tests": 19,
+    "failed_tests": 1,
+    "success_rate": 95.0
+  },
+  "results": [
+    {
+      "test": "Register Test User",
+      "success": true,
+      "timestamp": "2025-06-21T16:48:49.101756",
+      "status_code": 201,
+      "error": null,
+      "response_data": {
+        "message": "User registered successfully",
+        "user": {
+          "created_at": "2025-06-21T16:48:48.903948",
+          "email": "delete_test@example.com",
+          "id": null,
+          "is_active": true,
+          "last_login": null,
+          "name": "Delete Test User",
+          "role": "user"
+        }
+      }
+    },
+    {
+      "test": "Login Test User",
+      "success": true,
+      "timestamp": "2025-06-21T16:48:49.336878",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MDUwNDcyOSwianRpIjoiYWI5YzYzYzMtZjBlMS00ZjA4LWFjOTctMjViMDNlYjY0NGEyIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IjUiLCJuYmYiOjE3NTA1MDQ3MjksImNzcmYiOiI0MTViMTAxNC02NTgzLTQyOTItYTc2MC0zN2NiYWQ3ZjE2MTUiLCJleHAiOjE3NTA1OTExMjl9.XqyDeDjv6ICGz9PdfrZEDgP6Aj4psPuJpzdivv7ySKk",
+        "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTc1MDUwNDcyOSwianRpIjoiM2MxMDUyNmMtNjkxNy00NjEwLTg3NTctOTNhN2E5YjczY2ZjIiwidHlwZSI6InJlZnJlc2giLCJzdWIiOiI1IiwibmJmIjoxNzUwNTA0NzI5LCJjc3JmIjoiMTM0NGNjMDItY2Y0Ni00NjQ3LWJjNzgtMDkxYmY0MDU1ZDhkIiwiZXhwIjoxNzUzMDk2NzI5fQ.twYznYrURh1tkf5EKwFiFiijpguMSdJZ9P4i1LspQrM",
+        "user": {
+          "email": "delete_test@example.com",
+          "id": 5,
+          "name": "Delete Test User",
+          "role": "user"
+        }
+      }
+    },
+    {
+      "test": "Fetch Emails for Testing",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.284714",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "message": "Email fetch completed",
+        "results": {
+          "errors": [],
+          "failed_accounts": 0,
+          "successful_accounts": 2,
+          "total_accounts": 2,
+          "total_emails_fetched": 0
+        }
+      }
+    },
+    {
+      "test": "Get Email List",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.378965",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "emails": [
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+            "category": "meeting_meeting",
+            "created_at": "2025-06-21T16:49:01",
+            "date": "2025-06-21T14:01:25",
+            "folder": "inbox",
+            "id": "153",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<003101dbe286$e2225f00$a6671d00$@taxpro.co.in>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+            "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "HI ,\r\n\r\nI hope you're doing well.\r\n\r\nWe are excited to share the details of WhiteBooks eInvoice API, along with a demo to help you understand its features and integration process.\r\n\r\ne-Invoice API Demo Video Links:\r\n\r\nhttps://www.youtube.com/watch?v=V2oqgQeI4TE&t=316s&ab_channel=WhiteBooks\r\n\r\nResources Included:\r\n\r\n     \r\nIntegration Guide \u2013 Step-by-step instructions for free sandbox creation \r\nAPI Documentation \u2013 Endpoints, authentication, and request/response formats you can find on (https://einv-apisandbox.nic.in <https://einv-apisandbox.nic.in/>)\r\nHelp Files \u2013Postman collection and excel help files for mandatory params\r\nProposal-Pricing and Top up plans\r\nPlease review the demo videos and documentation. If you have any questions or need further assistance, feel free to reach out us on 9848799417.\r\n\r\nLooking forward to your feedback.\r\n\r\n\ufffc\ufffc\ufffc\ufffc\ufffc\r\nThanks & Regards,\r\nBrijesh | VP Sales, Whitebooks\r\n\ud83d\udcde M: +91 9848799417\r\n\ud83c\udf10 https://whitebooks.in\r\n\r\n\ufffc\r\n\r\n> On 21 Jun 2025, at 1:01\u202fPM, developer@nectorinternational.com wrote:\r\n> \r\n> Dear Brijesh,\r\n> \r\n> I hope you are doing well.\r\n> \r\n> We are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n> \r\n> As we are finalizing our requirements, we would appreciate it if you could share:\r\n> \r\n> A categorized list of the APIs you offer\r\n> \r\n> Brief description/functionality of each\r\n> \r\n> Pricing details\r\n> \r\n> Technical onboarding process\r\n> \r\n> We\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n> \r\n> Looking forward to your response.\r\n> \r\n> Best regards,\r\n> \r\n> Vikash Kumar\r\n> Backed Developer\r\n> Nector Foods Private Limited\r\n> +91 9667716146\r\n>",
+            "category": "meeting_meeting",
+            "created_at": "2025-06-21T16:49:00",
+            "date": "2025-06-21T13:32:52",
+            "folder": "inbox",
+            "id": "152",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<DB1B5690-15FC-4D63-B761-B92BBF1100C4@whitebooks.in>",
+            "metadata": {
+              "security": "Standard encryption (TLS)"
+            },
+            "sender": "brijesh <brijesh@whitebooks.in>",
+            "subject": "Re: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Team,\r\n\r\nThank you for your interest in our GST API services.\r\n\r\nWe offer robust solutions covering GSTIN verification, e-invoicing, return filing, and more. We'd be glad to connect with you for a quick discussion to walk you through our offerings, pricing, and the onboarding process.\r\n\r\nPlease share your preferred time slots or let us know if you'd like us to propose a few options for the meeting.\r\n\r\nLooking forward to speaking with you.\r\n\r\nThank you.\r\n[cid:image001.png@01DBE217.55FB9D80]<https://figmentglobal.com/>\r\nYash Trivedi\r\nBusiness Development Officer\r\n+91-7972976960\r\nPlot No 25, WHC Road , Shankar Nagar\r\nNagpur - 440010\r\n\r\n[LinkedIn image of LinkedIn icon]<https://in.linkedin.com/company/taxcpc>     [Twitter image of Twitter icon] <https://twitter.com/taxcpc_fgs?lang=en>\r\nFor any Escalation, please reach out to: - office@figmentglobal.com<mailto:office@figmentglobal.com>\r\n\r\nFrom: Figment-Himanshu <himanshu@figmentglobal.com>\r\nSent: Friday, June 20, 2025 6:50 PM\r\nTo: Figment-Yash Trivedi <yash.t@figmentglobal.com>\r\nCc: Figment-Office <office@figmentglobal.com>; Figment-Kapil Purohit <kapil@figmentglobal.com>\r\nSubject: Fw: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\n\r\nGet Outlook for iOS<https://aka.ms/o0ukef>\r\n________________________________\r\nFrom: developer@nectorinternational.com<mailto:developer@nectorinternational.com> <developer@nectorinternational.com<mailto:developer@nectorinternational.com>>\r\nSent: Friday, June 20, 2025 6:22:56 PM\r\nTo: Figment-Himanshu <himanshu@taxcpc.com<mailto:himanshu@taxcpc.com>>\r\nSubject: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\nDear Team,\r\n\r\nI hope you are doing well.\r\n\r\nI am reaching out to explore the possibility of using your GST API services for our business needs. We are looking for a reliable solution to help us with GST-related integrations such as GSTIN verification, e-invoicing, return filing, and related functionalities.\r\n\r\nI would appreciate it if we could schedule a quick call or meeting to better understand your offerings, pricing, and technical onboarding process.\r\n\r\nPlease let me know your available time slots, or feel free to directly connect with me at the contact details below.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.",
+            "category": "meeting_call",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T18:58:09",
+            "folder": "inbox",
+            "id": "151",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<PNZPR01MB465481CB343528D0B6631C539D7CA@PNZPR01MB4654.INDPRD01.PROD.OUTLOOK.COM>",
+            "metadata": {
+              "security": "Standard encryption (TLS1_2)"
+            },
+            "sender": "Figment-Yash Trivedi <yash.t@figmentglobal.com>",
+            "subject": "RE: Inquiry for GST API Services and Request for a Call/Meeting",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir/Madam,\r\nThank you for contacting TallyCare.\r\nWe would like to understand the status of your query regarding on Tally.NET Features_TallyPrime vide TLY - 07Jun2025 - 10658(15323174). Please share the status by clicking either of the below options:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nResolved \r\n\ud83d\ude0a\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nNot Yet Resolved \r\n\ud83d\ude10\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nWarm Regards,\r\nTeam Tally\r\n\u00a0\r\nClick here to unsubscribe",
+            "category": "general_tally_net",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T17:30:31",
+            "folder": "inbox",
+            "id": "150",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<mcyrln17503587867082126@tallysolutions.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "Tally.NET <tallynet@tallysolutions.com>",
+            "subject": "TLY - 07Jun2025 - 10658(15323174): request for API Access and Integration Options for Tally",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Quantum computers are not yet practical for real-world applications.\r\nPhysically engineering high-quality qubits has proven to be challenging. If\r\na physical qubit is not sufficiently isolated\r\n<https://en.wikipedia.org/wiki/Isolated_system> from its environment, it\r\nsuffers from quantum decoherence\r\n<https://en.wikipedia.org/wiki/Quantum_decoherence>, introducing noise\r\n<https://en.wikipedia.org/wiki/Noise_(signal_processing)> into\r\ncalculations. National governments have invested heavily in experimental\r\nresearch aimed at developing scalable qubits with longer coherence times\r\nand lower error rates. Example implementations include superconductors\r\n<https://en.wikipedia.org/wiki/Superconducting_quantum_computing> (which\r\nisolate an electrical current\r\n<https://en.wikipedia.org/wiki/Electrical_current> by eliminating electrical\r\nresistance <https://en.wikipedia.org/wiki/Electrical_resistance>) and ion\r\ntraps <https://en.wikipedia.org/wiki/Trapped_ion_quantum_computer> (which\r\nconfine a single atomic particle <https://en.wikipedia.org/wiki/Atom>\r\nusing electromagnetic\r\nfields <https://en.wikipedia.org/wiki/Electromagnetic_fields>).\r\n\r\nOn Fri, Jun 20, 2025 at 11:19\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> A *quantum computer* is a computer\r\n> <https://en.wikipedia.org/wiki/Computer> that exploits quantum mechanical\r\n> <https://en.wikipedia.org/wiki/Quantum_mechanical> phenomena. On small\r\n> scales, physical matter exhibits properties of both particles and waves\r\n> <https://en.wikipedia.org/wiki/Wave-particle_duality>, and quantum\r\n> computing takes advantage of this behavior using specialized hardware. Classical\r\n> physics <https://en.wikipedia.org/wiki/Classical_physics> cannot explain\r\n> the operation of these quantum devices, and a scalable quantum computer\r\n> could perform some calculations exponentially\r\n> <https://en.wikipedia.org/wiki/Exponential_growth> faster[a]\r\n> <https://en.wikipedia.org/wiki/Quantum_computing#cite_note-1> than any\r\n> modern \"classical\" computer. Theoretically a large-scale quantum computer\r\n> could break some widely used encryption schemes\r\n> <https://en.wikipedia.org/wiki/Post-quantum_cryptography> and aid\r\n> physicists in performing physical simulations\r\n> <https://en.wikipedia.org/wiki/Quantum_simulator>; however, the current\r\n> state of the art is largely experimental and impractical, with several\r\n> obstacles to useful applications.\r\n>\r\n> On Fri, Jun 20, 2025 at 11:11\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> \ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in\r\n>> Bangalore\r\n>>\r\n>> On Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> hi how are you what are you doing\r\n>>>\r\n>>>\r\n>>> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <\r\n>>> software7.nector@gmail.com> wrote:\r\n>>>\r\n>>>> ghjlp'o;uilytie'l'l;\r\n>>>>\r\n>>>> o[] ['ip0\r\n>>>> '\r\n>>>> ]0[[]ou\r\n>>>> [i9\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> i mjd dhb g j bfdnbf\r\n>>>>>>\r\n>>>>>> fd sdfh sadfi\r\n>>>>>> fds m nuya\r\n>>>>>> fds msfgaj ysdf\r\n>>>>>>\r\n>>>>>>\r\n>>>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hiiiikjafdsfgk\r\n>>>>>>> Eg gffmg gffg\r\n>>>>>>>\r\n>>>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> hii sir how are you\r\n>>>>>>>>\r\n>>>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>\r\n>>>>>>>>> jfgjghgyj\r\n>>>>>>>>>\r\n>>>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>>\r\n>>>>>>>>>> hiii\r\n>>>>>>>>>>\r\n>>>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T11:31:20",
+            "folder": "inbox",
+            "id": "149",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XtuWhunSe07xdJHNnriJVS6Xo3Yk=V3dh=ir4xMZJC5qA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "A *quantum computer* is a computer\r\n<https://en.wikipedia.org/wiki/Computer> that\r\nexploits quantum mechanical\r\n<https://en.wikipedia.org/wiki/Quantum_mechanical> phenomena. On small\r\nscales, physical matter exhibits properties of both particles and waves\r\n<https://en.wikipedia.org/wiki/Wave-particle_duality>, and quantum\r\ncomputing takes advantage of this behavior using specialized hardware.\r\nClassical\r\nphysics <https://en.wikipedia.org/wiki/Classical_physics> cannot explain\r\nthe operation of these quantum devices, and a scalable quantum computer\r\ncould perform some calculations exponentially\r\n<https://en.wikipedia.org/wiki/Exponential_growth> faster[a]\r\n<https://en.wikipedia.org/wiki/Quantum_computing#cite_note-1> than any\r\nmodern \"classical\" computer. Theoretically a large-scale quantum computer\r\ncould break some widely used encryption schemes\r\n<https://en.wikipedia.org/wiki/Post-quantum_cryptography> and aid\r\nphysicists in performing physical simulations\r\n<https://en.wikipedia.org/wiki/Quantum_simulator>; however, the current\r\nstate of the art is largely experimental and impractical, with several\r\nobstacles to useful applications.\r\n\r\nOn Fri, Jun 20, 2025 at 11:11\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> \ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in\r\n> Bangalore\r\n>\r\n> On Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> hi how are you what are you doing\r\n>>\r\n>>\r\n>> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> ghjlp'o;uilytie'l'l;\r\n>>>\r\n>>> o[] ['ip0\r\n>>> '\r\n>>> ]0[[]ou\r\n>>> [i9\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>>> wrote:\r\n>>>\r\n>>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> i mjd dhb g j bfdnbf\r\n>>>>>\r\n>>>>> fd sdfh sadfi\r\n>>>>> fds m nuya\r\n>>>>> fds msfgaj ysdf\r\n>>>>>\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> hiiiikjafdsfgk\r\n>>>>>> Eg gffmg gffg\r\n>>>>>>\r\n>>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hii sir how are you\r\n>>>>>>>\r\n>>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> jfgjghgyj\r\n>>>>>>>>\r\n>>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>\r\n>>>>>>>>> hiii\r\n>>>>>>>>>\r\n>>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:09",
+            "date": "2025-06-20T11:19:39",
+            "folder": "inbox",
+            "id": "148",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XvtMqu-C3c1dGTh8dzR-DsOo3tsYi3SLS-pWspNsHcXCA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "\ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in Bangalore\r\n\r\nOn Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> hi how are you what are you doing\r\n>\r\n>\r\n> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> ghjlp'o;uilytie'l'l;\r\n>>\r\n>> o[] ['ip0\r\n>> '\r\n>> ]0[[]ou\r\n>> [i9\r\n>>\r\n>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>>> wrote:\r\n>>>\r\n>>>> i mjd dhb g j bfdnbf\r\n>>>>\r\n>>>> fd sdfh sadfi\r\n>>>> fds m nuya\r\n>>>> fds msfgaj ysdf\r\n>>>>\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> hiiiikjafdsfgk\r\n>>>>> Eg gffmg gffg\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> hii sir how are you\r\n>>>>>>\r\n>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> jfgjghgyj\r\n>>>>>>>\r\n>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> hiii\r\n>>>>>>>>\r\n>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:08",
+            "date": "2025-06-20T11:11:32",
+            "folder": "inbox",
+            "id": "147",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XuTwOwAdzDjWAN0F+qeM3-0YX1=ahHoYVhh-93mtWT+qg@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "hi how are you what are you doing\r\n\r\n\r\nOn Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> ghjlp'o;uilytie'l'l;\r\n>\r\n> o[] ['ip0\r\n> '\r\n> ]0[[]ou\r\n> [i9\r\n>\r\n> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>\r\n>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> i mjd dhb g j bfdnbf\r\n>>>\r\n>>> fd sdfh sadfi\r\n>>> fds m nuya\r\n>>> fds msfgaj ysdf\r\n>>>\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>>> wrote:\r\n>>>\r\n>>>> hiiiikjafdsfgk\r\n>>>> Eg gffmg gffg\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> hii sir how are you\r\n>>>>>\r\n>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> jfgjghgyj\r\n>>>>>>\r\n>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hiii\r\n>>>>>>>\r\n>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:08",
+            "date": "2025-06-20T11:04:57",
+            "folder": "inbox",
+            "id": "146",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XtEbXjXrUNRWvUT-gOrrW=GPSpWg277qJOPkyhFhhPT+A@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "ghjlp'o;uilytie'l'l;\r\n\r\no[] ['ip0\r\n'\r\n]0[[]ou\r\n[i9\r\n\r\nOn Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>\r\n> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> i mjd dhb g j bfdnbf\r\n>>\r\n>> fd sdfh sadfi\r\n>> fds m nuya\r\n>> fds msfgaj ysdf\r\n>>\r\n>>\r\n>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> hiiiikjafdsfgk\r\n>>> Eg gffmg gffg\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>> software7.nector@gmail.com> wrote:\r\n>>>\r\n>>>> hii sir how are you\r\n>>>>\r\n>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> jfgjghgyj\r\n>>>>>\r\n>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> hiii\r\n>>>>>>\r\n>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:08",
+            "date": "2025-06-20T10:55:21",
+            "folder": "inbox",
+            "id": "145",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XveFe_qN2V-UKfswrP1GF-NkiV=ghSY9gwb_Eaq+Z5WVw@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Hiii how are you",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:07",
+            "date": "2025-06-20T10:22:56",
+            "folder": "inbox",
+            "id": "144",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1Xt7_fi7_yxHfoGssL1VjZvNJpyk+3p1sbr843x3zE4OaA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Regarding for test",
+            "tags": []
+          }
+        ],
+        "filters": {
+          "account": null,
+          "category": null,
+          "folder": "inbox",
+          "is_trashed": false,
+          "main_category": null,
+          "search": null,
+          "sub_category": null
+        },
+        "pagination": {
+          "page": 1,
+          "pages": 16,
+          "per_page": 10,
+          "total": 152
+        }
+      }
+    },
+    {
+      "test": "Mark Email as Read",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.459550",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email": {
+          "account_email": "developer@nectorinternational.com",
+          "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+          "category": "meeting_meeting",
+          "created_at": "1970-01-01T05:30:00",
+          "date": "2025-06-21T14:01:25",
+          "folder": "",
+          "id": "153",
+          "is_archived": true,
+          "is_read": true,
+          "is_spam": true,
+          "is_starred": true,
+          "is_trashed": true,
+          "message_id": "inbox",
+          "metadata": {},
+          "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+          "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+          "tags": []
+        },
+        "message": "Email marked as read (local only)"
+      }
+    },
+    {
+      "test": "Verify Email Read Status",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.507806",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email": {
+          "account_email": "developer@nectorinternational.com",
+          "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+          "category": "meeting_meeting",
+          "created_at": "1970-01-01T05:30:01",
+          "date": "2025-06-21T14:01:25",
+          "folder": "0",
+          "id": "153",
+          "is_archived": true,
+          "is_read": true,
+          "is_spam": true,
+          "is_starred": true,
+          "is_trashed": true,
+          "message_id": "",
+          "metadata": {},
+          "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+          "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+          "tags": []
+        }
+      }
+    },
+    {
+      "test": "Mark Email as Unread",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.656611",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email": {
+          "account_email": "developer@nectorinternational.com",
+          "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+          "category": "meeting_meeting",
+          "created_at": "1970-01-01T05:30:01",
+          "date": "2025-06-21T14:01:25",
+          "folder": "0",
+          "id": "153",
+          "is_archived": true,
+          "is_read": false,
+          "is_spam": true,
+          "is_starred": true,
+          "is_trashed": true,
+          "message_id": "",
+          "metadata": {},
+          "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+          "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+          "tags": []
+        },
+        "message": "Email marked as unread (local only)"
+      }
+    },
+    {
+      "test": "Verify Email Unread Status",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.710486",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email": {
+          "account_email": "developer@nectorinternational.com",
+          "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+          "category": "meeting_meeting",
+          "created_at": "1970-01-01T05:30:01",
+          "date": "2025-06-21T14:01:25",
+          "folder": "1",
+          "id": "153",
+          "is_archived": true,
+          "is_read": false,
+          "is_spam": true,
+          "is_starred": true,
+          "is_trashed": true,
+          "message_id": "0",
+          "metadata": {},
+          "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+          "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+          "tags": []
+        }
+      }
+    },
+    {
+      "test": "Mark All Emails as Read",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.785927",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "message": "All emails marked as read"
+      }
+    },
+    {
+      "test": "Move Email to Trash",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.885707",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email_id": "153",
+        "message": "Email successfully moved to trash",
+        "status": "trash"
+      }
+    },
+    {
+      "test": "Verify Email in Trash",
+      "success": false,
+      "timestamp": "2025-06-21T16:49:01.936187",
+      "status_code": null,
+      "error": null
+    },
+    {
+      "test": "Check Email Trash Status",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:01.985404",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email": {
+          "account_email": "developer@nectorinternational.com",
+          "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+          "category": "meeting_meeting",
+          "created_at": "1970-01-01T05:30:01",
+          "date": "2025-06-21T14:01:25",
+          "folder": "1",
+          "id": "153",
+          "is_archived": true,
+          "is_read": true,
+          "is_spam": true,
+          "is_starred": true,
+          "is_trashed": true,
+          "message_id": "trash",
+          "metadata": {},
+          "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+          "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+          "tags": 0
+        }
+      }
+    },
+    {
+      "test": "Restore Email from Trash",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.102951",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email_id": "153",
+        "message": "Email successfully moved to restore",
+        "status": "restore"
+      }
+    },
+    {
+      "test": "Verify Email Restored to Inbox",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.183209",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "emails": [
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+            "category": "meeting_meeting",
+            "created_at": "1970-01-01T05:30:01",
+            "date": "2025-06-21T14:01:25",
+            "folder": "inbox",
+            "id": "153",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 1,
+            "is_trashed": 0,
+            "message_id": "trash",
+            "metadata": {},
+            "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+            "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "HI ,\r\n\r\nI hope you're doing well.\r\n\r\nWe are excited to share the details of WhiteBooks eInvoice API, along with a demo to help you understand its features and integration process.\r\n\r\ne-Invoice API Demo Video Links:\r\n\r\nhttps://www.youtube.com/watch?v=V2oqgQeI4TE&t=316s&ab_channel=WhiteBooks\r\n\r\nResources Included:\r\n\r\n     \r\nIntegration Guide \u2013 Step-by-step instructions for free sandbox creation \r\nAPI Documentation \u2013 Endpoints, authentication, and request/response formats you can find on (https://einv-apisandbox.nic.in <https://einv-apisandbox.nic.in/>)\r\nHelp Files \u2013Postman collection and excel help files for mandatory params\r\nProposal-Pricing and Top up plans\r\nPlease review the demo videos and documentation. If you have any questions or need further assistance, feel free to reach out us on 9848799417.\r\n\r\nLooking forward to your feedback.\r\n\r\n\ufffc\ufffc\ufffc\ufffc\ufffc\r\nThanks & Regards,\r\nBrijesh | VP Sales, Whitebooks\r\n\ud83d\udcde M: +91 9848799417\r\n\ud83c\udf10 https://whitebooks.in\r\n\r\n\ufffc\r\n\r\n> On 21 Jun 2025, at 1:01\u202fPM, developer@nectorinternational.com wrote:\r\n> \r\n> Dear Brijesh,\r\n> \r\n> I hope you are doing well.\r\n> \r\n> We are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n> \r\n> As we are finalizing our requirements, we would appreciate it if you could share:\r\n> \r\n> A categorized list of the APIs you offer\r\n> \r\n> Brief description/functionality of each\r\n> \r\n> Pricing details\r\n> \r\n> Technical onboarding process\r\n> \r\n> We\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n> \r\n> Looking forward to your response.\r\n> \r\n> Best regards,\r\n> \r\n> Vikash Kumar\r\n> Backed Developer\r\n> Nector Foods Private Limited\r\n> +91 9667716146\r\n>",
+            "category": "meeting_meeting",
+            "created_at": "2025-06-21T16:49:00",
+            "date": "2025-06-21T13:32:52",
+            "folder": "inbox",
+            "id": "152",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<DB1B5690-15FC-4D63-B761-B92BBF1100C4@whitebooks.in>",
+            "metadata": {
+              "security": "Standard encryption (TLS)"
+            },
+            "sender": "brijesh <brijesh@whitebooks.in>",
+            "subject": "Re: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Team,\r\n\r\nThank you for your interest in our GST API services.\r\n\r\nWe offer robust solutions covering GSTIN verification, e-invoicing, return filing, and more. We'd be glad to connect with you for a quick discussion to walk you through our offerings, pricing, and the onboarding process.\r\n\r\nPlease share your preferred time slots or let us know if you'd like us to propose a few options for the meeting.\r\n\r\nLooking forward to speaking with you.\r\n\r\nThank you.\r\n[cid:image001.png@01DBE217.55FB9D80]<https://figmentglobal.com/>\r\nYash Trivedi\r\nBusiness Development Officer\r\n+91-7972976960\r\nPlot No 25, WHC Road , Shankar Nagar\r\nNagpur - 440010\r\n\r\n[LinkedIn image of LinkedIn icon]<https://in.linkedin.com/company/taxcpc>     [Twitter image of Twitter icon] <https://twitter.com/taxcpc_fgs?lang=en>\r\nFor any Escalation, please reach out to: - office@figmentglobal.com<mailto:office@figmentglobal.com>\r\n\r\nFrom: Figment-Himanshu <himanshu@figmentglobal.com>\r\nSent: Friday, June 20, 2025 6:50 PM\r\nTo: Figment-Yash Trivedi <yash.t@figmentglobal.com>\r\nCc: Figment-Office <office@figmentglobal.com>; Figment-Kapil Purohit <kapil@figmentglobal.com>\r\nSubject: Fw: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\n\r\nGet Outlook for iOS<https://aka.ms/o0ukef>\r\n________________________________\r\nFrom: developer@nectorinternational.com<mailto:developer@nectorinternational.com> <developer@nectorinternational.com<mailto:developer@nectorinternational.com>>\r\nSent: Friday, June 20, 2025 6:22:56 PM\r\nTo: Figment-Himanshu <himanshu@taxcpc.com<mailto:himanshu@taxcpc.com>>\r\nSubject: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\nDear Team,\r\n\r\nI hope you are doing well.\r\n\r\nI am reaching out to explore the possibility of using your GST API services for our business needs. We are looking for a reliable solution to help us with GST-related integrations such as GSTIN verification, e-invoicing, return filing, and related functionalities.\r\n\r\nI would appreciate it if we could schedule a quick call or meeting to better understand your offerings, pricing, and technical onboarding process.\r\n\r\nPlease let me know your available time slots, or feel free to directly connect with me at the contact details below.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.",
+            "category": "meeting_call",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T18:58:09",
+            "folder": "inbox",
+            "id": "151",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<PNZPR01MB465481CB343528D0B6631C539D7CA@PNZPR01MB4654.INDPRD01.PROD.OUTLOOK.COM>",
+            "metadata": {
+              "security": "Standard encryption (TLS1_2)"
+            },
+            "sender": "Figment-Yash Trivedi <yash.t@figmentglobal.com>",
+            "subject": "RE: Inquiry for GST API Services and Request for a Call/Meeting",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir/Madam,\r\nThank you for contacting TallyCare.\r\nWe would like to understand the status of your query regarding on Tally.NET Features_TallyPrime vide TLY - 07Jun2025 - 10658(15323174). Please share the status by clicking either of the below options:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nResolved \r\n\ud83d\ude0a\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nNot Yet Resolved \r\n\ud83d\ude10\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nWarm Regards,\r\nTeam Tally\r\n\u00a0\r\nClick here to unsubscribe",
+            "category": "general_tally_net",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T17:30:31",
+            "folder": "inbox",
+            "id": "150",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<mcyrln17503587867082126@tallysolutions.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "Tally.NET <tallynet@tallysolutions.com>",
+            "subject": "TLY - 07Jun2025 - 10658(15323174): request for API Access and Integration Options for Tally",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Quantum computers are not yet practical for real-world applications.\r\nPhysically engineering high-quality qubits has proven to be challenging. If\r\na physical qubit is not sufficiently isolated\r\n<https://en.wikipedia.org/wiki/Isolated_system> from its environment, it\r\nsuffers from quantum decoherence\r\n<https://en.wikipedia.org/wiki/Quantum_decoherence>, introducing noise\r\n<https://en.wikipedia.org/wiki/Noise_(signal_processing)> into\r\ncalculations. National governments have invested heavily in experimental\r\nresearch aimed at developing scalable qubits with longer coherence times\r\nand lower error rates. Example implementations include superconductors\r\n<https://en.wikipedia.org/wiki/Superconducting_quantum_computing> (which\r\nisolate an electrical current\r\n<https://en.wikipedia.org/wiki/Electrical_current> by eliminating electrical\r\nresistance <https://en.wikipedia.org/wiki/Electrical_resistance>) and ion\r\ntraps <https://en.wikipedia.org/wiki/Trapped_ion_quantum_computer> (which\r\nconfine a single atomic particle <https://en.wikipedia.org/wiki/Atom>\r\nusing electromagnetic\r\nfields <https://en.wikipedia.org/wiki/Electromagnetic_fields>).\r\n\r\nOn Fri, Jun 20, 2025 at 11:19\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> A *quantum computer* is a computer\r\n> <https://en.wikipedia.org/wiki/Computer> that exploits quantum mechanical\r\n> <https://en.wikipedia.org/wiki/Quantum_mechanical> phenomena. On small\r\n> scales, physical matter exhibits properties of both particles and waves\r\n> <https://en.wikipedia.org/wiki/Wave-particle_duality>, and quantum\r\n> computing takes advantage of this behavior using specialized hardware. Classical\r\n> physics <https://en.wikipedia.org/wiki/Classical_physics> cannot explain\r\n> the operation of these quantum devices, and a scalable quantum computer\r\n> could perform some calculations exponentially\r\n> <https://en.wikipedia.org/wiki/Exponential_growth> faster[a]\r\n> <https://en.wikipedia.org/wiki/Quantum_computing#cite_note-1> than any\r\n> modern \"classical\" computer. Theoretically a large-scale quantum computer\r\n> could break some widely used encryption schemes\r\n> <https://en.wikipedia.org/wiki/Post-quantum_cryptography> and aid\r\n> physicists in performing physical simulations\r\n> <https://en.wikipedia.org/wiki/Quantum_simulator>; however, the current\r\n> state of the art is largely experimental and impractical, with several\r\n> obstacles to useful applications.\r\n>\r\n> On Fri, Jun 20, 2025 at 11:11\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> \ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in\r\n>> Bangalore\r\n>>\r\n>> On Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> hi how are you what are you doing\r\n>>>\r\n>>>\r\n>>> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <\r\n>>> software7.nector@gmail.com> wrote:\r\n>>>\r\n>>>> ghjlp'o;uilytie'l'l;\r\n>>>>\r\n>>>> o[] ['ip0\r\n>>>> '\r\n>>>> ]0[[]ou\r\n>>>> [i9\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> i mjd dhb g j bfdnbf\r\n>>>>>>\r\n>>>>>> fd sdfh sadfi\r\n>>>>>> fds m nuya\r\n>>>>>> fds msfgaj ysdf\r\n>>>>>>\r\n>>>>>>\r\n>>>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hiiiikjafdsfgk\r\n>>>>>>> Eg gffmg gffg\r\n>>>>>>>\r\n>>>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> hii sir how are you\r\n>>>>>>>>\r\n>>>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>\r\n>>>>>>>>> jfgjghgyj\r\n>>>>>>>>>\r\n>>>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>>\r\n>>>>>>>>>> hiii\r\n>>>>>>>>>>\r\n>>>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T11:31:20",
+            "folder": "inbox",
+            "id": "149",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XtuWhunSe07xdJHNnriJVS6Xo3Yk=V3dh=ir4xMZJC5qA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "A *quantum computer* is a computer\r\n<https://en.wikipedia.org/wiki/Computer> that\r\nexploits quantum mechanical\r\n<https://en.wikipedia.org/wiki/Quantum_mechanical> phenomena. On small\r\nscales, physical matter exhibits properties of both particles and waves\r\n<https://en.wikipedia.org/wiki/Wave-particle_duality>, and quantum\r\ncomputing takes advantage of this behavior using specialized hardware.\r\nClassical\r\nphysics <https://en.wikipedia.org/wiki/Classical_physics> cannot explain\r\nthe operation of these quantum devices, and a scalable quantum computer\r\ncould perform some calculations exponentially\r\n<https://en.wikipedia.org/wiki/Exponential_growth> faster[a]\r\n<https://en.wikipedia.org/wiki/Quantum_computing#cite_note-1> than any\r\nmodern \"classical\" computer. Theoretically a large-scale quantum computer\r\ncould break some widely used encryption schemes\r\n<https://en.wikipedia.org/wiki/Post-quantum_cryptography> and aid\r\nphysicists in performing physical simulations\r\n<https://en.wikipedia.org/wiki/Quantum_simulator>; however, the current\r\nstate of the art is largely experimental and impractical, with several\r\nobstacles to useful applications.\r\n\r\nOn Fri, Jun 20, 2025 at 11:11\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> \ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in\r\n> Bangalore\r\n>\r\n> On Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> hi how are you what are you doing\r\n>>\r\n>>\r\n>> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> ghjlp'o;uilytie'l'l;\r\n>>>\r\n>>> o[] ['ip0\r\n>>> '\r\n>>> ]0[[]ou\r\n>>> [i9\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>>> wrote:\r\n>>>\r\n>>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> i mjd dhb g j bfdnbf\r\n>>>>>\r\n>>>>> fd sdfh sadfi\r\n>>>>> fds m nuya\r\n>>>>> fds msfgaj ysdf\r\n>>>>>\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> hiiiikjafdsfgk\r\n>>>>>> Eg gffmg gffg\r\n>>>>>>\r\n>>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hii sir how are you\r\n>>>>>>>\r\n>>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> jfgjghgyj\r\n>>>>>>>>\r\n>>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>\r\n>>>>>>>>> hiii\r\n>>>>>>>>>\r\n>>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:09",
+            "date": "2025-06-20T11:19:39",
+            "folder": "inbox",
+            "id": "148",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XvtMqu-C3c1dGTh8dzR-DsOo3tsYi3SLS-pWspNsHcXCA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "\ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in Bangalore\r\n\r\nOn Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> hi how are you what are you doing\r\n>\r\n>\r\n> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> ghjlp'o;uilytie'l'l;\r\n>>\r\n>> o[] ['ip0\r\n>> '\r\n>> ]0[[]ou\r\n>> [i9\r\n>>\r\n>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>>> wrote:\r\n>>>\r\n>>>> i mjd dhb g j bfdnbf\r\n>>>>\r\n>>>> fd sdfh sadfi\r\n>>>> fds m nuya\r\n>>>> fds msfgaj ysdf\r\n>>>>\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> hiiiikjafdsfgk\r\n>>>>> Eg gffmg gffg\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> hii sir how are you\r\n>>>>>>\r\n>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> jfgjghgyj\r\n>>>>>>>\r\n>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> hiii\r\n>>>>>>>>\r\n>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:08",
+            "date": "2025-06-20T11:11:32",
+            "folder": "inbox",
+            "id": "147",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XuTwOwAdzDjWAN0F+qeM3-0YX1=ahHoYVhh-93mtWT+qg@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "hi how are you what are you doing\r\n\r\n\r\nOn Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> ghjlp'o;uilytie'l'l;\r\n>\r\n> o[] ['ip0\r\n> '\r\n> ]0[[]ou\r\n> [i9\r\n>\r\n> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>\r\n>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> i mjd dhb g j bfdnbf\r\n>>>\r\n>>> fd sdfh sadfi\r\n>>> fds m nuya\r\n>>> fds msfgaj ysdf\r\n>>>\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>>> wrote:\r\n>>>\r\n>>>> hiiiikjafdsfgk\r\n>>>> Eg gffmg gffg\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> hii sir how are you\r\n>>>>>\r\n>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> jfgjghgyj\r\n>>>>>>\r\n>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hiii\r\n>>>>>>>\r\n>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:08",
+            "date": "2025-06-20T11:04:57",
+            "folder": "inbox",
+            "id": "146",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XtEbXjXrUNRWvUT-gOrrW=GPSpWg277qJOPkyhFhhPT+A@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "ghjlp'o;uilytie'l'l;\r\n\r\no[] ['ip0\r\n'\r\n]0[[]ou\r\n[i9\r\n\r\nOn Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>\r\n> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> i mjd dhb g j bfdnbf\r\n>>\r\n>> fd sdfh sadfi\r\n>> fds m nuya\r\n>> fds msfgaj ysdf\r\n>>\r\n>>\r\n>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> hiiiikjafdsfgk\r\n>>> Eg gffmg gffg\r\n>>>\r\n>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>> software7.nector@gmail.com> wrote:\r\n>>>\r\n>>>> hii sir how are you\r\n>>>>\r\n>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> jfgjghgyj\r\n>>>>>\r\n>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> hiii\r\n>>>>>>\r\n>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:08",
+            "date": "2025-06-20T10:55:21",
+            "folder": "inbox",
+            "id": "145",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XveFe_qN2V-UKfswrP1GF-NkiV=ghSY9gwb_Eaq+Z5WVw@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Hiii how are you",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:07",
+            "date": "2025-06-20T10:22:56",
+            "folder": "inbox",
+            "id": "144",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1Xt7_fi7_yxHfoGssL1VjZvNJpyk+3p1sbr843x3zE4OaA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Regarding for test",
+            "tags": []
+          }
+        ],
+        "filters": {
+          "account": null,
+          "category": null,
+          "folder": "inbox",
+          "is_trashed": false,
+          "main_category": null,
+          "search": null,
+          "sub_category": null
+        },
+        "pagination": {
+          "page": 1,
+          "pages": 16,
+          "per_page": 10,
+          "total": 152
+        }
+      }
+    },
+    {
+      "test": "Check Email Status After Restore",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.233055",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email": {
+          "account_email": "developer@nectorinternational.com",
+          "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+          "category": "meeting_meeting",
+          "created_at": "1970-01-01T05:30:00",
+          "date": "2025-06-21T14:01:25",
+          "folder": "1",
+          "id": "153",
+          "is_archived": true,
+          "is_read": true,
+          "is_spam": true,
+          "is_starred": true,
+          "is_trashed": true,
+          "message_id": "inbox",
+          "metadata": {},
+          "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+          "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+          "tags": []
+        }
+      }
+    },
+    {
+      "test": "Move Email to Archive",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.323611",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email_id": "153",
+        "message": "Email successfully moved to archive",
+        "status": "archive"
+      }
+    },
+    {
+      "test": "Move Email to Spam",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.407397",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email_id": "153",
+        "message": "Email successfully moved to spam",
+        "status": "spam"
+      }
+    },
+    {
+      "test": "Restore Email to Inbox (Cleanup)",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.519487",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "email_id": "153",
+        "message": "Email successfully moved to restore",
+        "status": "restore"
+      }
+    },
+    {
+      "test": "Filter Unread Emails",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.604036",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "emails": [
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+            "category": "meeting_meeting",
+            "created_at": "1970-01-01T05:30:01",
+            "date": "2025-06-21T14:01:25",
+            "folder": "inbox",
+            "id": "153",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 1,
+            "is_trashed": 0,
+            "message_id": "spam",
+            "metadata": {},
+            "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+            "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "HI ,\r\n\r\nI hope you're doing well.\r\n\r\nWe are excited to share the details of WhiteBooks eInvoice API, along with a demo to help you understand its features and integration process.\r\n\r\ne-Invoice API Demo Video Links:\r\n\r\nhttps://www.youtube.com/watch?v=V2oqgQeI4TE&t=316s&ab_channel=WhiteBooks\r\n\r\nResources Included:\r\n\r\n     \r\nIntegration Guide \u2013 Step-by-step instructions for free sandbox creation \r\nAPI Documentation \u2013 Endpoints, authentication, and request/response formats you can find on (https://einv-apisandbox.nic.in <https://einv-apisandbox.nic.in/>)\r\nHelp Files \u2013Postman collection and excel help files for mandatory params\r\nProposal-Pricing and Top up plans\r\nPlease review the demo videos and documentation. If you have any questions or need further assistance, feel free to reach out us on 9848799417.\r\n\r\nLooking forward to your feedback.\r\n\r\n\ufffc\ufffc\ufffc\ufffc\ufffc\r\nThanks & Regards,\r\nBrijesh | VP Sales, Whitebooks\r\n\ud83d\udcde M: +91 9848799417\r\n\ud83c\udf10 https://whitebooks.in\r\n\r\n\ufffc\r\n\r\n> On 21 Jun 2025, at 1:01\u202fPM, developer@nectorinternational.com wrote:\r\n> \r\n> Dear Brijesh,\r\n> \r\n> I hope you are doing well.\r\n> \r\n> We are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n> \r\n> As we are finalizing our requirements, we would appreciate it if you could share:\r\n> \r\n> A categorized list of the APIs you offer\r\n> \r\n> Brief description/functionality of each\r\n> \r\n> Pricing details\r\n> \r\n> Technical onboarding process\r\n> \r\n> We\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n> \r\n> Looking forward to your response.\r\n> \r\n> Best regards,\r\n> \r\n> Vikash Kumar\r\n> Backed Developer\r\n> Nector Foods Private Limited\r\n> +91 9667716146\r\n>",
+            "category": "meeting_meeting",
+            "created_at": "2025-06-21T16:49:00",
+            "date": "2025-06-21T13:32:52",
+            "folder": "inbox",
+            "id": "152",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<DB1B5690-15FC-4D63-B761-B92BBF1100C4@whitebooks.in>",
+            "metadata": {
+              "security": "Standard encryption (TLS)"
+            },
+            "sender": "brijesh <brijesh@whitebooks.in>",
+            "subject": "Re: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Team,\r\n\r\nThank you for your interest in our GST API services.\r\n\r\nWe offer robust solutions covering GSTIN verification, e-invoicing, return filing, and more. We'd be glad to connect with you for a quick discussion to walk you through our offerings, pricing, and the onboarding process.\r\n\r\nPlease share your preferred time slots or let us know if you'd like us to propose a few options for the meeting.\r\n\r\nLooking forward to speaking with you.\r\n\r\nThank you.\r\n[cid:image001.png@01DBE217.55FB9D80]<https://figmentglobal.com/>\r\nYash Trivedi\r\nBusiness Development Officer\r\n+91-7972976960\r\nPlot No 25, WHC Road , Shankar Nagar\r\nNagpur - 440010\r\n\r\n[LinkedIn image of LinkedIn icon]<https://in.linkedin.com/company/taxcpc>     [Twitter image of Twitter icon] <https://twitter.com/taxcpc_fgs?lang=en>\r\nFor any Escalation, please reach out to: - office@figmentglobal.com<mailto:office@figmentglobal.com>\r\n\r\nFrom: Figment-Himanshu <himanshu@figmentglobal.com>\r\nSent: Friday, June 20, 2025 6:50 PM\r\nTo: Figment-Yash Trivedi <yash.t@figmentglobal.com>\r\nCc: Figment-Office <office@figmentglobal.com>; Figment-Kapil Purohit <kapil@figmentglobal.com>\r\nSubject: Fw: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\n\r\nGet Outlook for iOS<https://aka.ms/o0ukef>\r\n________________________________\r\nFrom: developer@nectorinternational.com<mailto:developer@nectorinternational.com> <developer@nectorinternational.com<mailto:developer@nectorinternational.com>>\r\nSent: Friday, June 20, 2025 6:22:56 PM\r\nTo: Figment-Himanshu <himanshu@taxcpc.com<mailto:himanshu@taxcpc.com>>\r\nSubject: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\nDear Team,\r\n\r\nI hope you are doing well.\r\n\r\nI am reaching out to explore the possibility of using your GST API services for our business needs. We are looking for a reliable solution to help us with GST-related integrations such as GSTIN verification, e-invoicing, return filing, and related functionalities.\r\n\r\nI would appreciate it if we could schedule a quick call or meeting to better understand your offerings, pricing, and technical onboarding process.\r\n\r\nPlease let me know your available time slots, or feel free to directly connect with me at the contact details below.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.",
+            "category": "meeting_call",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T18:58:09",
+            "folder": "inbox",
+            "id": "151",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<PNZPR01MB465481CB343528D0B6631C539D7CA@PNZPR01MB4654.INDPRD01.PROD.OUTLOOK.COM>",
+            "metadata": {
+              "security": "Standard encryption (TLS1_2)"
+            },
+            "sender": "Figment-Yash Trivedi <yash.t@figmentglobal.com>",
+            "subject": "RE: Inquiry for GST API Services and Request for a Call/Meeting",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir/Madam,\r\nThank you for contacting TallyCare.\r\nWe would like to understand the status of your query regarding on Tally.NET Features_TallyPrime vide TLY - 07Jun2025 - 10658(15323174). Please share the status by clicking either of the below options:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nResolved \r\n\ud83d\ude0a\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nNot Yet Resolved \r\n\ud83d\ude10\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nWarm Regards,\r\nTeam Tally\r\n\u00a0\r\nClick here to unsubscribe",
+            "category": "general_tally_net",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T17:30:31",
+            "folder": "inbox",
+            "id": "150",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<mcyrln17503587867082126@tallysolutions.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "Tally.NET <tallynet@tallysolutions.com>",
+            "subject": "TLY - 07Jun2025 - 10658(15323174): request for API Access and Integration Options for Tally",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Quantum computers are not yet practical for real-world applications.\r\nPhysically engineering high-quality qubits has proven to be challenging. If\r\na physical qubit is not sufficiently isolated\r\n<https://en.wikipedia.org/wiki/Isolated_system> from its environment, it\r\nsuffers from quantum decoherence\r\n<https://en.wikipedia.org/wiki/Quantum_decoherence>, introducing noise\r\n<https://en.wikipedia.org/wiki/Noise_(signal_processing)> into\r\ncalculations. National governments have invested heavily in experimental\r\nresearch aimed at developing scalable qubits with longer coherence times\r\nand lower error rates. Example implementations include superconductors\r\n<https://en.wikipedia.org/wiki/Superconducting_quantum_computing> (which\r\nisolate an electrical current\r\n<https://en.wikipedia.org/wiki/Electrical_current> by eliminating electrical\r\nresistance <https://en.wikipedia.org/wiki/Electrical_resistance>) and ion\r\ntraps <https://en.wikipedia.org/wiki/Trapped_ion_quantum_computer> (which\r\nconfine a single atomic particle <https://en.wikipedia.org/wiki/Atom>\r\nusing electromagnetic\r\nfields <https://en.wikipedia.org/wiki/Electromagnetic_fields>).\r\n\r\nOn Fri, Jun 20, 2025 at 11:19\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> A *quantum computer* is a computer\r\n> <https://en.wikipedia.org/wiki/Computer> that exploits quantum mechanical\r\n> <https://en.wikipedia.org/wiki/Quantum_mechanical> phenomena. On small\r\n> scales, physical matter exhibits properties of both particles and waves\r\n> <https://en.wikipedia.org/wiki/Wave-particle_duality>, and quantum\r\n> computing takes advantage of this behavior using specialized hardware. Classical\r\n> physics <https://en.wikipedia.org/wiki/Classical_physics> cannot explain\r\n> the operation of these quantum devices, and a scalable quantum computer\r\n> could perform some calculations exponentially\r\n> <https://en.wikipedia.org/wiki/Exponential_growth> faster[a]\r\n> <https://en.wikipedia.org/wiki/Quantum_computing#cite_note-1> than any\r\n> modern \"classical\" computer. Theoretically a large-scale quantum computer\r\n> could break some widely used encryption schemes\r\n> <https://en.wikipedia.org/wiki/Post-quantum_cryptography> and aid\r\n> physicists in performing physical simulations\r\n> <https://en.wikipedia.org/wiki/Quantum_simulator>; however, the current\r\n> state of the art is largely experimental and impractical, with several\r\n> obstacles to useful applications.\r\n>\r\n> On Fri, Jun 20, 2025 at 11:11\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> \ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in\r\n>> Bangalore\r\n>>\r\n>> On Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> hi how are you what are you doing\r\n>>>\r\n>>>\r\n>>> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <\r\n>>> software7.nector@gmail.com> wrote:\r\n>>>\r\n>>>> ghjlp'o;uilytie'l'l;\r\n>>>>\r\n>>>> o[] ['ip0\r\n>>>> '\r\n>>>> ]0[[]ou\r\n>>>> [i9\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> i mjd dhb g j bfdnbf\r\n>>>>>>\r\n>>>>>> fd sdfh sadfi\r\n>>>>>> fds m nuya\r\n>>>>>> fds msfgaj ysdf\r\n>>>>>>\r\n>>>>>>\r\n>>>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hiiiikjafdsfgk\r\n>>>>>>> Eg gffmg gffg\r\n>>>>>>>\r\n>>>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> hii sir how are you\r\n>>>>>>>>\r\n>>>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>\r\n>>>>>>>>> jfgjghgyj\r\n>>>>>>>>>\r\n>>>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>>\r\n>>>>>>>>>> hiii\r\n>>>>>>>>>>\r\n>>>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T11:31:20",
+            "folder": "inbox",
+            "id": "149",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XtuWhunSe07xdJHNnriJVS6Xo3Yk=V3dh=ir4xMZJC5qA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          }
+        ],
+        "filters": {
+          "account": null,
+          "category": null,
+          "folder": "inbox",
+          "is_trashed": false,
+          "main_category": null,
+          "search": null,
+          "sub_category": null
+        },
+        "pagination": {
+          "page": 1,
+          "pages": 31,
+          "per_page": 5,
+          "total": 152
+        }
+      }
+    },
+    {
+      "test": "Filter Read Emails",
+      "success": true,
+      "timestamp": "2025-06-21T16:49:02.713233",
+      "status_code": 200,
+      "error": null,
+      "response_data": {
+        "emails": [
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir,\r\n\r\nGreetings from the TaxPro GSP Team!\r\n\r\nWe already have one ASP Account with the name Nector Foods Private Limited.\r\n\r\n \r\n\r\nCan you please confirm this information is your company details ?\r\n\r\n \r\n\r\nNECTOR FOODS PRIVATE LIMITED, New Delhi\r\n\r\nSaumay Pathak \u2013 919667716146\r\n\r\n07AAECN9399L1ZK\r\n\r\n <mailto:developer@nectorfoods.com> developer@nectorfoods.com\r\n\r\n \r\n\r\nIf this is correct so you can use with this same account, please confirm so that we can discuss further details.\r\n\r\n \r\n\r\n \r\n\r\nThanks & Regards,\r\n\r\n\r\n\r\n\r\nBhagyashri\r\n\r\nChartered Information Systems Private Limited\r\n\r\nNear Lata Mangeshkar Park,\r\n\r\nBhandara Road, NAGPUR - 440035\r\n\r\nPh: +91 712 663 8888 (100 Lines)\r\n\r\n <https://www.charteredinfo.com/> www.charteredinfo.com\r\n\r\nDelhi | Mumbai | Nagpur | Bangalore | Kolkata\r\n\r\ncid:image006.png@01D777EC.551BEE40\r\n\r\nTaxPro GSP\r\n\r\neInvoice | eWayBill | GST API \r\n\r\nBulk Signing |  <https://web.signer.digital/> Free PDF Signing\r\n\r\nBrowser Extension | PKI Component \r\n\r\nePass Tokens | Digital Signatures\r\n\r\nIncome Tax | TDS | XBRL Softwares\r\n\r\nBiometric | Gate Automation\r\n\r\nBulk SMS | WhatsApp Business\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nCONFIDENTIALITY NOTICE:\r\n\r\nThe contents of this email message and any attachments are intended solely for the addressee(s) and may contain confidential and/or privileged information and may be legally protected from disclosure. If you are not the intended recipient of this message or their agent, or if this message has been addressed to you in error, please immediately alert the sender by reply email and then delete this message and any attachments. If you are not the intended recipient, you are hereby notified that any use, dissemination, copying, or storage of this message or its attachments is strictly prohibited.\r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\n \r\n\r\nFrom: developer@nectorinternational.com [mailto:developer@nectorinternational.com] \r\nSent: 21/06/2025 1:04 PM\r\nTo: gsp@taxpro.co.in\r\nSubject: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue\r\n\r\n \r\n\r\nDear Chetan Raivadera,\r\n\r\nI hope you are doing well.\r\n\r\nWe are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n\r\nAs we are finalizing our requirements, we would appreciate it if you could share:\r\n\r\n\u00b7         A categorized list of the APIs you offer\r\n\r\n\u00b7         Brief description/functionality of each\r\n\r\n\u00b7         Pricing details\r\n\r\n\u00b7         Technical onboarding process\r\n\r\nWe\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\n\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146",
+            "category": "meeting_meeting",
+            "created_at": "1970-01-01T05:30:01",
+            "date": "2025-06-21T14:01:25",
+            "folder": "inbox",
+            "id": "153",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 1,
+            "is_trashed": 0,
+            "message_id": "spam",
+            "metadata": {},
+            "sender": "\"TaxProGSP\" <gsp@taxpro.co.in>",
+            "subject": "RE: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "HI ,\r\n\r\nI hope you're doing well.\r\n\r\nWe are excited to share the details of WhiteBooks eInvoice API, along with a demo to help you understand its features and integration process.\r\n\r\ne-Invoice API Demo Video Links:\r\n\r\nhttps://www.youtube.com/watch?v=V2oqgQeI4TE&t=316s&ab_channel=WhiteBooks\r\n\r\nResources Included:\r\n\r\n     \r\nIntegration Guide \u2013 Step-by-step instructions for free sandbox creation \r\nAPI Documentation \u2013 Endpoints, authentication, and request/response formats you can find on (https://einv-apisandbox.nic.in <https://einv-apisandbox.nic.in/>)\r\nHelp Files \u2013Postman collection and excel help files for mandatory params\r\nProposal-Pricing and Top up plans\r\nPlease review the demo videos and documentation. If you have any questions or need further assistance, feel free to reach out us on 9848799417.\r\n\r\nLooking forward to your feedback.\r\n\r\n\ufffc\ufffc\ufffc\ufffc\ufffc\r\nThanks & Regards,\r\nBrijesh | VP Sales, Whitebooks\r\n\ud83d\udcde M: +91 9848799417\r\n\ud83c\udf10 https://whitebooks.in\r\n\r\n\ufffc\r\n\r\n> On 21 Jun 2025, at 1:01\u202fPM, developer@nectorinternational.com wrote:\r\n> \r\n> Dear Brijesh,\r\n> \r\n> I hope you are doing well.\r\n> \r\n> We are exploring GST API services to support our compliance and automation needs, including functionalities such as GSTIN verification, e-invoicing, return filing, and more.\r\n> \r\n> As we are finalizing our requirements, we would appreciate it if you could share:\r\n> \r\n> A categorized list of the APIs you offer\r\n> \r\n> Brief description/functionality of each\r\n> \r\n> Pricing details\r\n> \r\n> Technical onboarding process\r\n> \r\n> We\u2019d also like to schedule a quick call or meeting to understand your offerings better. Please let us know your available time slots or feel free to propose a few.\r\n> \r\n> Looking forward to your response.\r\n> \r\n> Best regards,\r\n> \r\n> Vikash Kumar\r\n> Backed Developer\r\n> Nector Foods Private Limited\r\n> +91 9667716146\r\n>",
+            "category": "meeting_meeting",
+            "created_at": "2025-06-21T16:49:00",
+            "date": "2025-06-21T13:32:52",
+            "folder": "inbox",
+            "id": "152",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<DB1B5690-15FC-4D63-B761-B92BBF1100C4@whitebooks.in>",
+            "metadata": {
+              "security": "Standard encryption (TLS)"
+            },
+            "sender": "brijesh <brijesh@whitebooks.in>",
+            "subject": "Re: Inquiry for GST API Services \u2013 Request for Meeting & API Catalogue",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Team,\r\n\r\nThank you for your interest in our GST API services.\r\n\r\nWe offer robust solutions covering GSTIN verification, e-invoicing, return filing, and more. We'd be glad to connect with you for a quick discussion to walk you through our offerings, pricing, and the onboarding process.\r\n\r\nPlease share your preferred time slots or let us know if you'd like us to propose a few options for the meeting.\r\n\r\nLooking forward to speaking with you.\r\n\r\nThank you.\r\n[cid:image001.png@01DBE217.55FB9D80]<https://figmentglobal.com/>\r\nYash Trivedi\r\nBusiness Development Officer\r\n+91-7972976960\r\nPlot No 25, WHC Road , Shankar Nagar\r\nNagpur - 440010\r\n\r\n[LinkedIn image of LinkedIn icon]<https://in.linkedin.com/company/taxcpc>     [Twitter image of Twitter icon] <https://twitter.com/taxcpc_fgs?lang=en>\r\nFor any Escalation, please reach out to: - office@figmentglobal.com<mailto:office@figmentglobal.com>\r\n\r\nFrom: Figment-Himanshu <himanshu@figmentglobal.com>\r\nSent: Friday, June 20, 2025 6:50 PM\r\nTo: Figment-Yash Trivedi <yash.t@figmentglobal.com>\r\nCc: Figment-Office <office@figmentglobal.com>; Figment-Kapil Purohit <kapil@figmentglobal.com>\r\nSubject: Fw: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\n\r\nGet Outlook for iOS<https://aka.ms/o0ukef>\r\n________________________________\r\nFrom: developer@nectorinternational.com<mailto:developer@nectorinternational.com> <developer@nectorinternational.com<mailto:developer@nectorinternational.com>>\r\nSent: Friday, June 20, 2025 6:22:56 PM\r\nTo: Figment-Himanshu <himanshu@taxcpc.com<mailto:himanshu@taxcpc.com>>\r\nSubject: Inquiry for GST API Services and Request for a Call/Meeting\r\n\r\n\r\nDear Team,\r\n\r\nI hope you are doing well.\r\n\r\nI am reaching out to explore the possibility of using your GST API services for our business needs. We are looking for a reliable solution to help us with GST-related integrations such as GSTIN verification, e-invoicing, return filing, and related functionalities.\r\n\r\nI would appreciate it if we could schedule a quick call or meeting to better understand your offerings, pricing, and technical onboarding process.\r\n\r\nPlease let me know your available time slots, or feel free to directly connect with me at the contact details below.\r\n\r\nLooking forward to your response.\r\n\r\nBest regards,\r\nVikash Kumar\r\nBacked Developer\r\nNector Foods Private Limited\r\n+91 9667716146\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.\r\nDisclaimer: This email and any attachments transmitted with it are confidential and intended solely for the use of the individual or entity to whom they are addressed. If you have received this email in error, please notify the sender immediately and delete this message and any attachments from your system. Any unauthorized review, use, disclosure, or distribution is prohibited. Please be aware that communication by email is not a secure method and any information transmitted could be intercepted, corrupted, or lost. The views and opinions expressed in this email are solely those of the author and do not necessarily represent those of the company. Our company accepts no liability for any damage caused by any virus transmitted by this email and we have taken due care for virus scanning.Thank you.",
+            "category": "meeting_call",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T18:58:09",
+            "folder": "inbox",
+            "id": "151",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<PNZPR01MB465481CB343528D0B6631C539D7CA@PNZPR01MB4654.INDPRD01.PROD.OUTLOOK.COM>",
+            "metadata": {
+              "security": "Standard encryption (TLS1_2)"
+            },
+            "sender": "Figment-Yash Trivedi <yash.t@figmentglobal.com>",
+            "subject": "RE: Inquiry for GST API Services and Request for a Call/Meeting",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Dear Sir/Madam,\r\nThank you for contacting TallyCare.\r\nWe would like to understand the status of your query regarding on Tally.NET Features_TallyPrime vide TLY - 07Jun2025 - 10658(15323174). Please share the status by clicking either of the below options:\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nResolved \r\n\ud83d\ude0a\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n \r\n\r\n\r\nNot Yet Resolved \r\n\ud83d\ude10\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nWarm Regards,\r\nTeam Tally\r\n\u00a0\r\nClick here to unsubscribe",
+            "category": "general_tally_net",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T17:30:31",
+            "folder": "inbox",
+            "id": "150",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<mcyrln17503587867082126@tallysolutions.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "Tally.NET <tallynet@tallysolutions.com>",
+            "subject": "TLY - 07Jun2025 - 10658(15323174): request for API Access and Integration Options for Tally",
+            "tags": []
+          },
+          {
+            "account_email": "developer@nectorinternational.com",
+            "body": "Quantum computers are not yet practical for real-world applications.\r\nPhysically engineering high-quality qubits has proven to be challenging. If\r\na physical qubit is not sufficiently isolated\r\n<https://en.wikipedia.org/wiki/Isolated_system> from its environment, it\r\nsuffers from quantum decoherence\r\n<https://en.wikipedia.org/wiki/Quantum_decoherence>, introducing noise\r\n<https://en.wikipedia.org/wiki/Noise_(signal_processing)> into\r\ncalculations. National governments have invested heavily in experimental\r\nresearch aimed at developing scalable qubits with longer coherence times\r\nand lower error rates. Example implementations include superconductors\r\n<https://en.wikipedia.org/wiki/Superconducting_quantum_computing> (which\r\nisolate an electrical current\r\n<https://en.wikipedia.org/wiki/Electrical_current> by eliminating electrical\r\nresistance <https://en.wikipedia.org/wiki/Electrical_resistance>) and ion\r\ntraps <https://en.wikipedia.org/wiki/Trapped_ion_quantum_computer> (which\r\nconfine a single atomic particle <https://en.wikipedia.org/wiki/Atom>\r\nusing electromagnetic\r\nfields <https://en.wikipedia.org/wiki/Electromagnetic_fields>).\r\n\r\nOn Fri, Jun 20, 2025 at 11:19\u202fAM vikash kumar <software7.nector@gmail.com>\r\nwrote:\r\n\r\n> A *quantum computer* is a computer\r\n> <https://en.wikipedia.org/wiki/Computer> that exploits quantum mechanical\r\n> <https://en.wikipedia.org/wiki/Quantum_mechanical> phenomena. On small\r\n> scales, physical matter exhibits properties of both particles and waves\r\n> <https://en.wikipedia.org/wiki/Wave-particle_duality>, and quantum\r\n> computing takes advantage of this behavior using specialized hardware. Classical\r\n> physics <https://en.wikipedia.org/wiki/Classical_physics> cannot explain\r\n> the operation of these quantum devices, and a scalable quantum computer\r\n> could perform some calculations exponentially\r\n> <https://en.wikipedia.org/wiki/Exponential_growth> faster[a]\r\n> <https://en.wikipedia.org/wiki/Quantum_computing#cite_note-1> than any\r\n> modern \"classical\" computer. Theoretically a large-scale quantum computer\r\n> could break some widely used encryption schemes\r\n> <https://en.wikipedia.org/wiki/Post-quantum_cryptography> and aid\r\n> physicists in performing physical simulations\r\n> <https://en.wikipedia.org/wiki/Quantum_simulator>; however, the current\r\n> state of the art is largely experimental and impractical, with several\r\n> obstacles to useful applications.\r\n>\r\n> On Fri, Jun 20, 2025 at 11:11\u202fAM vikash kumar <software7.nector@gmail.com>\r\n> wrote:\r\n>\r\n>> \ud83d\udd25 The Project Everyone\u2019s Talking About! \ud83c\udfe1 \u2013 Godrej Properties in\r\n>> Bangalore\r\n>>\r\n>> On Fri, Jun 20, 2025 at 11:04\u202fAM vikash kumar <software7.nector@gmail.com>\r\n>> wrote:\r\n>>\r\n>>> hi how are you what are you doing\r\n>>>\r\n>>>\r\n>>> On Fri, Jun 20, 2025 at 10:55\u202fAM vikash kumar <\r\n>>> software7.nector@gmail.com> wrote:\r\n>>>\r\n>>>> ghjlp'o;uilytie'l'l;\r\n>>>>\r\n>>>> o[] ['ip0\r\n>>>> '\r\n>>>> ]0[[]ou\r\n>>>> [i9\r\n>>>>\r\n>>>> On Sat, Jun 14, 2025 at 2:56\u202fPM vikash kumar <\r\n>>>> software7.nector@gmail.com> wrote:\r\n>>>>\r\n>>>>> bdasmn dgjv dfg\\] fgjgnb gdfd[gg fgkgjfd fd fjgfdu fg\r\n>>>>>\r\n>>>>> On Sat, Jun 14, 2025 at 2:52\u202fPM vikash kumar <\r\n>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>\r\n>>>>>> i mjd dhb g j bfdnbf\r\n>>>>>>\r\n>>>>>> fd sdfh sadfi\r\n>>>>>> fds m nuya\r\n>>>>>> fds msfgaj ysdf\r\n>>>>>>\r\n>>>>>>\r\n>>>>>> On Sat, Jun 14, 2025 at 2:13\u202fPM vikash kumar <\r\n>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>\r\n>>>>>>> hiiiikjafdsfgk\r\n>>>>>>> Eg gffmg gffg\r\n>>>>>>>\r\n>>>>>>> On Sat, Jun 14, 2025 at 12:56\u202fPM vikash kumar <\r\n>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>\r\n>>>>>>>> hii sir how are you\r\n>>>>>>>>\r\n>>>>>>>> On Fri, Jun 13, 2025 at 1:24\u202fPM vikash kumar <\r\n>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>\r\n>>>>>>>>> jfgjghgyj\r\n>>>>>>>>>\r\n>>>>>>>>> On Fri, Jun 13, 2025 at 11:29\u202fAM vikash kumar <\r\n>>>>>>>>> software7.nector@gmail.com> wrote:\r\n>>>>>>>>>\r\n>>>>>>>>>> hiii\r\n>>>>>>>>>>\r\n>>>>>>>>>",
+            "category": "general_vikash_kumar",
+            "created_at": "2025-06-21T16:48:59",
+            "date": "2025-06-20T11:31:20",
+            "folder": "inbox",
+            "id": "149",
+            "is_archived": 0,
+            "is_read": 1,
+            "is_spam": 0,
+            "is_starred": 0,
+            "is_trashed": 0,
+            "message_id": "<CA+==1XtuWhunSe07xdJHNnriJVS6Xo3Yk=V3dh=ir4xMZJC5qA@mail.gmail.com>",
+            "metadata": {
+              "security": "No encryption information found"
+            },
+            "sender": "vikash kumar <software7.nector@gmail.com>",
+            "subject": "Re: testing only",
+            "tags": []
+          }
+        ],
+        "filters": {
+          "account": null,
+          "category": null,
+          "folder": "inbox",
+          "is_trashed": false,
+          "main_category": null,
+          "search": null,
+          "sub_category": null
+        },
+        "pagination": {
+          "page": 1,
+          "pages": 31,
+          "per_page": 5,
+          "total": 152
+        }
+      }
+    }
+  ]
+}

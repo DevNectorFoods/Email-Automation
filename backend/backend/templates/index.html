@@ -1,0 +1,211 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Email Automation System{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <!-- Hero Section -->
+    <div class="row justify-content-center mb-5">
+        <div class="col-lg-8 text-center">
+            <h1 class="display-4 mb-4">
+                <i class="bi bi-envelope-at text-primary me-3"></i>
+                Email Automation System
+            </h1>
+            <p class="lead text-muted">
+                Multi-account email fetching and management platform with intelligent categorization
+            </p>
+            <div class="mt-4">
+                <a href="{{ url_for('dashboard') }}" class="btn btn-primary btn-lg me-3">
+                    <i class="bi bi-speedometer2 me-2"></i>Go to Dashboard
+                </a>
+                <a href="{{ url_for('api_docs') }}" class="btn btn-outline-secondary btn-lg">
+                    <i class="bi bi-file-text me-2"></i>API Documentation
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-cloud-download display-4 text-primary"></i>
+                    </div>
+                    <h5 class="card-title">Multi-Account Fetching</h5>
+                    <p class="card-text text-muted">
+                        Fetch emails from multiple Hostinger accounts via IMAP with credentials stored in Google Sheets
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-tags display-4 text-success"></i>
+                    </div>
+                    <h5 class="card-title">Smart Categorization</h5>
+                    <p class="card-text text-muted">
+                        Automatically categorize emails using rule-based system, ready for AI/ML integration
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="mb-3">
+                        <i class="bi bi-api display-4 text-info"></i>
+                    </div>
+                    <h5 class="card-title">REST API</h5>
+                    <p class="card-text text-muted">
+                        Complete REST API with JWT authentication for email management and automation
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Stats Section -->
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-bar-chart me-2"></i>System Overview
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center" id="system-stats">
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <h3 class="text-primary mb-1" id="total-emails">-</h3>
+                                <small class="text-muted">Total Emails</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <h3 class="text-success mb-1" id="total-accounts">-</h3>
+                                <small class="text-muted">Email Accounts</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <h3 class="text-info mb-1" id="categories-count">-</h3>
+                                <small class="text-muted">Categories</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="mb-3">
+                                <h3 class="text-warning mb-1" id="last-fetch">-</h3>
+                                <small class="text-muted">Last Fetch</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-3">
+                        <button class="btn btn-primary" id="refresh-stats">
+                            <i class="bi bi-arrow-clockwise me-2"></i>Refresh Stats
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Getting Started Section -->
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">
+                        <i class="bi bi-rocket me-2"></i>Getting Started
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <ol class="list-group list-group-numbered list-group-flush">
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Configure Google Sheets</div>
+                                Set up your Google Sheets with Hostinger email credentials
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Login to Dashboard</div>
+                                Access the dashboard to manage emails and trigger fetches
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                            <div class="ms-2 me-auto">
+                                <div class="fw-bold">Use REST API</div>
+                                Integrate with the REST API for automated email management
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Load system stats
+    loadSystemStats();
+    
+    // Refresh stats button
+    document.getElementById('refresh-stats').addEventListener('click', loadSystemStats);
+});
+
+async function loadSystemStats() {
+    try {
+        // Check if user is authenticated
+        const token = localStorage.getItem('access_token');
+        if (!token) {
+            document.getElementById('system-stats').innerHTML = 
+                '<div class="col-12 text-center text-muted">Login to view system statistics</div>';
+            return;
+        }
+        
+        const response = await fetch('/api/emails/stats', {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            const stats = data.stats;
+            
+            document.getElementById('total-emails').textContent = stats.total_emails || 0;
+            document.getElementById('total-accounts').textContent = stats.total_accounts || 0;
+            
+            const categoryCount = Object.keys(stats.emails_by_category || {}).length;
+            document.getElementById('categories-count').textContent = categoryCount;
+            
+            const lastFetch = stats.last_fetch_time;
+            if (lastFetch) {
+                const date = new Date(lastFetch);
+                document.getElementById('last-fetch').textContent = date.toLocaleDateString();
+            } else {
+                document.getElementById('last-fetch').textContent = 'Never';
+            }
+        } else {
+            document.getElementById('system-stats').innerHTML = 
+                '<div class="col-12 text-center text-muted">Unable to load statistics</div>';
+        }
+    } catch (error) {
+        console.error('Error loading stats:', error);
+        document.getElementById('system-stats').innerHTML = 
+            '<div class="col-12 text-center text-muted">Error loading statistics</div>';
+    }
+}
+</script>
+{% endblock %}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .endpoint {
+            background: white;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .method {
+            display: inline-block;
+            padding: 5px 10px;
+            border-radius: 3px;
+            color: white;
+            font-weight: bold;
+        }
+        .get { background-color: #61affe; }
+        .post { background-color: #49cc90; }
+        .endpoint-url {
+            font-family: monospace;
+            background: #f8f8f8;
+            padding: 5px;
+            border-radius: 3px;
+        }
+        .test-section {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 3px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #response {
+            margin-top: 10px;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 3px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>API Documentation</h1>
+    
+    <div class="endpoint">
+        <h2>Auth APIs</h2>
+        <div>
+            <span class="method get">GET</span>
+            <span class="endpoint-url">/api/auth/test</span>
+            <div class="test-section">
+                <button onclick="testEndpoint('/api/auth/test', 'GET')">Test</button>
+            </div>
+        </div>
+        <div style="margin-top: 10px;">
+            <span class="method post">POST</span>
+            <span class="endpoint-url">/api/auth/login</span>
+            <div class="test-section">
+                <input type="text" id="login-email" placeholder="Email" value="test@example.com">
+                <input type="password" id="login-password" placeholder="Password" value="test123">
+                <button onclick="testLogin()">Test Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Email APIs</h2>
+        <div>
+            <span class="method get">GET</span>
+            <span class="endpoint-url">/api/emails/test</span>
+            <div class="test-section">
+                <button onclick="testEndpoint('/api/emails/test', 'GET')">Test</button>
+            </div>
+        </div>
+        <div style="margin-top: 10px;">
+            <span class="method get">GET</span>
+            <span class="endpoint-url">/api/emails/stats</span>
+            <div class="test-section">
+                <button onclick="testEndpoint('/api/emails/stats', 'GET')">Test</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Admin APIs</h2>
+        <div>
+            <span class="method get">GET</span>
+            <span class="endpoint-url">/api/admin/test</span>
+            <div class="test-section">
+                <button onclick="testEndpoint('/api/admin/test', 'GET')">Test</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Settings APIs</h2>
+        <div>
+            <span class="method get">GET</span>
+            <span class="endpoint-url">/api/settings/test</span>
+            <div class="test-section">
+                <button onclick="testEndpoint('/api/settings/test', 'GET')">Test</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Notification APIs</h2>
+        <div>
+            <span class="method get">GET</span>
+            <span class="endpoint-url">/api/notifications/test</span>
+            <div class="test-section">
+                <button onclick="testEndpoint('/api/notifications/test', 'GET')">Test</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="endpoint">
+        <h2>Reply APIs</h2>
+        <div>
+            <span class="method get">GET</span>
+            <span class="endpoint-url">/api/replies/test</span>
+            <div class="test-section">
+                <button onclick="testEndpoint('/api/replies/test', 'GET')">Test</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="response"></div>
+
+    <script>
+        async function testEndpoint(endpoint, method) {
+            try {
+                const response = await fetch(endpoint, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+                const data = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = 'Error: ' + error.message;
+            }
+        }
+
+        async function testLogin() {
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            
+            try {
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+                const data = await response.json();
+                document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+            } catch (error) {
+                document.getElementById('response').textContent = 'Error: ' + error.message;
+            }
+        }
+    </script>
+</body>
+</html> 
